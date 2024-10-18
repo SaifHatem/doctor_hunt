@@ -1,9 +1,12 @@
-import 'package:doctor_hunt/features/onboarding/ui/screens/page_view.dart';
+import 'package:doctor_hunt/core/routing/app_router.dart';
+import 'package:doctor_hunt/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DoctorHunt extends StatelessWidget {
-  const DoctorHunt({super.key});
+  final AppRouter appRouter;
+  const DoctorHunt({super.key, required this.appRouter});
 
   @override
   Widget build(BuildContext context) {
@@ -11,11 +14,13 @@ class DoctorHunt extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       child: MaterialApp(
-        home: const IntroScreen(),
+        home: const SplashView(),
         theme: ThemeData(
           scaffoldBackgroundColor: Colors.white,
+          textTheme: GoogleFonts.rubikTextTheme(),
         ),
         debugShowCheckedModeBanner: false,
+        onGenerateRoute: appRouter.generateRoute,
       ),
     );
   }

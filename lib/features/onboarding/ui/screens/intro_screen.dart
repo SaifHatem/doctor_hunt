@@ -77,7 +77,8 @@ class _IntroScreenState extends State<IntroScreen> {
             itemBuilder: (BuildContext context, int index) {
               final page = _pages[index];
               return IntroWidget(
-                index: index,
+                index: index, // Pass the index parameter here
+                currentIndex: _activePage, // Pass the current active page
                 color: page['color'],
                 title: page['title'],
                 description: page['description'],
