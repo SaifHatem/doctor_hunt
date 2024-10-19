@@ -34,6 +34,7 @@ class CustomContainerForFacebookAndGoogle extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            //! TODO: Why you used here a svg image while we already have a custimzed widget?
             SvgPicture.asset(
               image,
               width: 18.17.w,
