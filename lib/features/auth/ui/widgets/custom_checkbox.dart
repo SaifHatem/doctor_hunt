@@ -20,7 +20,7 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
         activeColor: AppColors.primaryColor,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12.r),
+          borderRadius: BorderRadius.circular(15.r),
         ),
         value: _isChecked,
         onChanged: (bool? value) {
