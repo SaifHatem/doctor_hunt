@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-
-import 'custom_container_for_facebook_and_google.dart';
+import 'package:doctor_hunt/core/helpers/route_export.dart';
 
 class SigninAndSignupRowMethods extends StatelessWidget {
   const SigninAndSignupRowMethods({

@@ -1,8 +1,4 @@
-import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
-
-import '../../../../core/routing/routes.dart';
-import '../widgets/intro_widget.dart';
+import 'package:doctor_hunt/core/helpers/route_export.dart';
 
 class AppScrollBehavior extends MaterialScrollBehavior {
   @override

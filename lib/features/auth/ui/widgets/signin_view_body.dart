@@ -1,14 +1,4 @@
-import 'package:doctor_hunt/core/helpers/app_strings.dart';
-import 'package:flutter/material.dart';
-
-import '../../../../core/helpers/spacing.dart';
-import '../../../../core/routing/routes.dart';
-import '../../../../core/theming/app_colors.dart';
-import '../../../../core/theming/app_styles.dart';
-import '../../../../core/widgets/app_text_button.dart';
-import '../../../../core/widgets/text_form_field.dart';
-import 'signin_and_signup_row_methods.dart';
-import 'signin_custome_welcome.dart';
+import 'package:doctor_hunt/core/helpers/route_export.dart';
 
 class SigninViewBody extends StatelessWidget {
   const SigninViewBody({
@@ -22,15 +12,25 @@ class SigninViewBody extends StatelessWidget {
         Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-              //! TODO: Assets Must Be in The Assets File ...
               image: AssetImage('assets/images/screen_background.png'),
               fit: BoxFit.cover,
             ),
           ),
         ),
+        // const Positioned.fill(
+        //   child: CustomSVGImage(
+        //     asset: 'assets/svgs/app_background.svg',
+        //     fit: BoxFit.cover,
+        //   ),
+        // ),
+        // Container(
+        //   child: SvgPicture.asset(
+        //     'assets/svgs/app_background.svg',
+        //     fit: BoxFit.cover,
+        //   ),
+        // ),
         Padding(
-          //! TODO: Padding Must Be Responsive ...
-          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+          padding: EdgeInsets.symmetric(horizontal: 12.0.w),
           child: SingleChildScrollView(
             child: Column(
               //mainAxisAlignment: MainAxisAlignment.center,
@@ -51,6 +51,7 @@ class SigninViewBody extends StatelessWidget {
                 ),
                 verticalSpace(32),
                 AppTextButton(
+                  verticalPadding: 10.h,
                   buttonText: AppStrings.login,
                   textStyle: AppStyles.font18Medium.copyWith(
                     color: Colors.white,

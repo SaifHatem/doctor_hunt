@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-
-import '../widgets/signup_view_body.dart';
+import 'package:doctor_hunt/core/helpers/route_export.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});

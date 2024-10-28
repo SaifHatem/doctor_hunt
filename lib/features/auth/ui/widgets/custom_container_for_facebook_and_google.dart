@@ -1,8 +1,4 @@
-import 'package:doctor_hunt/core/widgets/custom_svg_image.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../core/theming/app_styles.dart';
+import 'package:doctor_hunt/core/helpers/route_export.dart';
 
 class CustomContainerForFacebookAndGoogle extends StatelessWidget {
   const CustomContainerForFacebookAndGoogle({
@@ -19,7 +15,7 @@ class CustomContainerForFacebookAndGoogle extends StatelessWidget {
       width: 160.w,
       height: 54.h,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(12.r),
         color: Colors.white.withOpacity(.9),
         boxShadow: [
           BoxShadow(

@@ -1,9 +1,4 @@
-import 'package:doctor_hunt/core/routing/routes.dart';
-import 'package:doctor_hunt/features/auth/ui/screens/signin_screen.dart';
-import 'package:doctor_hunt/features/onboarding/ui/screens/intro_screen.dart';
-import 'package:flutter/material.dart';
-
-import '../../features/auth/ui/screens/signup_screen.dart';
+import 'package:doctor_hunt/core/helpers/route_export.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {

@@ -1,14 +1,4 @@
-import 'package:doctor_hunt/core/helpers/app_strings.dart';
-import 'package:flutter/material.dart';
-
-import '../../../../core/helpers/spacing.dart';
-import '../../../../core/theming/app_colors.dart';
-import '../../../../core/theming/app_styles.dart';
-import '../../../../core/widgets/app_text_button.dart';
-import '../../../../core/widgets/text_form_field.dart';
-import 'signin_and_signup_row_methods.dart';
-import 'signin_custome_welcome.dart';
-import 'signup_terms.dart';
+import 'package:doctor_hunt/core/helpers/route_export.dart';
 
 class SignupViewBody extends StatelessWidget {
   const SignupViewBody({super.key});
@@ -52,6 +42,7 @@ class SignupViewBody extends StatelessWidget {
                 const SignupTerms(),
                 verticalSpace(32),
                 AppTextButton(
+                  verticalPadding: 10.h,
                   buttonText: AppStrings.signUp,
                   textStyle: AppStyles.font18Medium.copyWith(
                     color: Colors.white,
