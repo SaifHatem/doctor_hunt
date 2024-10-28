@@ -1,3 +1,4 @@
+import 'package:doctor_hunt/core/helpers/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,7 +17,7 @@ class SignupTerms extends StatelessWidget {
       children: [
         const CustomCheckBox(),
         Text(
-          'I agree with the Terms of Service & Privacy Policy',
+          AppStrings.iAgreeWithTerms,
           style: AppStyles.font14Medium
               .copyWith(fontWeight: FontWeight.w400, fontSize: 12.sp),
         ),

@@ -1,3 +1,4 @@
+import 'package:doctor_hunt/core/helpers/app_strings.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/helpers/spacing.dart';
@@ -13,12 +14,12 @@ class SigninCustomWelcomeTxt extends StatelessWidget {
     return Column(
       children: [
         Text(
-          'Welcome Backs',
+          AppStrings.signinWelcomeBacks,
           style: AppStyles.font24Medium,
         ),
         verticalSpace(20),
         Text(
-          'You can search course, apply course and find scholarship for abroad studies',
+          AppStrings.authYouCanSearch,
           style: AppStyles.font14Medium,
           textAlign: TextAlign.center,
         ),

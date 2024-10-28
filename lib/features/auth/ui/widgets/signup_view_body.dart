@@ -1,3 +1,4 @@
+import 'package:doctor_hunt/core/helpers/app_strings.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/helpers/spacing.dart';
@@ -37,21 +38,21 @@ class SignupViewBody extends StatelessWidget {
                 const SigninAndSignupRowMethods(),
                 verticalSpace(37),
                 const AppTextFormField(
-                  hintText: 'name',
+                  hintText: AppStrings.name,
                 ),
                 verticalSpace(15),
                 const AppTextFormField(
-                  hintText: 'email',
+                  hintText: AppStrings.email,
                 ),
                 verticalSpace(15),
                 const AppTextFormField(
-                  hintText: 'password',
+                  hintText: AppStrings.password,
                   isPasswordField: true,
                 ),
                 const SignupTerms(),
                 verticalSpace(32),
                 AppTextButton(
-                  buttonText: 'Sign up',
+                  buttonText: AppStrings.signUp,
                   textStyle: AppStyles.font18Medium.copyWith(
                     color: Colors.white,
                   ),
@@ -63,7 +64,7 @@ class SignupViewBody extends StatelessWidget {
                     Navigator.pop(context);
                   },
                   child: Text(
-                    'Have an account? login',
+                    AppStrings.alreadyHaveAccount,
                     style: AppStyles.font14Medium.copyWith(
                         color: AppColors.primaryColor,
                         fontWeight: FontWeight.w400),
