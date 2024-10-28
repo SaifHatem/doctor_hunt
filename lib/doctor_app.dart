@@ -1,5 +1,5 @@
 import 'package:doctor_hunt/core/routing/app_router.dart';
-import 'package:doctor_hunt/features/splash/presentation/views/splash_view.dart';
+import 'package:doctor_hunt/features/onboarding/ui/screens/intro_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,7 +14,7 @@ class DoctorHunt extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       child: MaterialApp(
-        home: const SplashView(),
+        home: const IntroScreen(),
         theme: ThemeData(
           scaffoldBackgroundColor: Colors.white,
           textTheme: GoogleFonts.rubikTextTheme(),

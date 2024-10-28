@@ -87,7 +87,11 @@ class IntroWidget extends StatelessWidget {
                   textStyle:
                       AppStyles.font18Medium.copyWith(color: Colors.white),
                   onPressed: () {
-                    Navigator.pushNamed(context, Routes.signinScreen);
+                    if (index == currentIndex) {
+                      onTab(); // Move to the next page
+                    } else {
+                      Navigator.pushNamed(context, Routes.signinScreen);
+                    }
                   },
                 ),
                 const SizedBox(height: 20),

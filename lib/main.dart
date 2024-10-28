@@ -11,7 +11,9 @@ void main() async {
     ),
 
     // DevicePreview(
-    //   builder: (context) => const DoctorHunt(),
+    //   builder: (context) => DoctorHunt(
+    //     appRouter: AppRouter(),
+    //   ),
     //   enabled: !kReleaseMode,
     // ),
   );

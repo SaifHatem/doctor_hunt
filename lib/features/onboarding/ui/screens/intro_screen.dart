@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/routing/routes.dart';
 import '../widgets/intro_widget.dart';
 
 class AppScrollBehavior extends MaterialScrollBehavior {
@@ -20,7 +21,6 @@ class IntroScreen extends StatefulWidget {
 
 class _IntroScreenState extends State<IntroScreen> {
   final PageController _pageController = PageController();
-
   int _activePage = 0;
 
   void onNextPage() {
@@ -29,6 +29,9 @@ class _IntroScreenState extends State<IntroScreen> {
         duration: const Duration(milliseconds: 500),
         curve: Curves.fastEaseInToSlowEaseOut,
       );
+    } else {
+      Navigator.pushNamed(
+          context, Routes.signinScreen); // Navigate on last page
     }
   }
 
@@ -77,8 +80,8 @@ class _IntroScreenState extends State<IntroScreen> {
             itemBuilder: (BuildContext context, int index) {
               final page = _pages[index];
               return IntroWidget(
-                index: index, // Pass the index parameter here
-                currentIndex: _activePage, // Pass the current active page
+                index: index,
+                currentIndex: _activePage,
                 color: page['color'],
                 title: page['title'],
                 description: page['description'],
