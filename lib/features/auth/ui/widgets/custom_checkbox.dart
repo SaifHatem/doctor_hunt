@@ -1,5 +1,6 @@
 import 'package:doctor_hunt/core/theming/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomCheckBox extends StatefulWidget {
   const CustomCheckBox({super.key});
@@ -14,13 +15,12 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
   @override
   Widget build(BuildContext context) {
     return Transform.scale(
-      scale: 1, // Adjust this scale to fit your needs
+      scale: 1,
       child: Checkbox(
-        materialTapTargetSize:
-            MaterialTapTargetSize.shrinkWrap, // Shrinks tap target area
+        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
         activeColor: AppColors.primaryColor,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(12.r),
         ),
         value: _isChecked,
         onChanged: (bool? value) {
