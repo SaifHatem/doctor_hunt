@@ -56,8 +56,8 @@ class AppTextButton extends StatelessWidget {
         // to DocSpotColorsManager.primaryBlueColor.
         padding: WidgetStateProperty.all<EdgeInsets>(
           EdgeInsets.symmetric(
-            horizontal: horizontalPadding?.w ?? 12.w,
-            vertical: verticalPadding?.h ?? 14.h,
+            horizontal: horizontalPadding?.w ?? 122.w,
+            vertical: verticalPadding?.h ?? 18.h,
           ),
         ),
         //   // padding: WidgetStateProperty.all<EdgeInsets>(...): Sets the padding

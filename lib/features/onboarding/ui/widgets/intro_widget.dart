@@ -83,6 +83,8 @@ class IntroWidget extends StatelessWidget {
                 ),
                 SizedBox(height: 20.h),
                 AppTextButton(
+                  horizontalPadding: 97.w,
+                  verticalPadding: 18.h,
                   buttonText: 'Get Started',
                   textStyle:
                       AppStyles.font18Medium.copyWith(color: Colors.white),

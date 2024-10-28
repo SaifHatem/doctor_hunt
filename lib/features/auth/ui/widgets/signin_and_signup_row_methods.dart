@@ -12,14 +12,12 @@ class SigninAndSignupRowMethods extends StatelessWidget {
     return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-
-        //! TODO: Assets in Assets File ...
         CustomContainerForFacebookAndGoogle(
-          image: 'assets/images/google.svg',
+          image: 'assets/svgs/google.svg',
           text: 'Google',
         ),
         CustomContainerForFacebookAndGoogle(
-          image: 'assets/images/facebook.svg',
+          image: 'assets/svgs/facebook.svg',
           text: 'Facebook',
         ),
       ],

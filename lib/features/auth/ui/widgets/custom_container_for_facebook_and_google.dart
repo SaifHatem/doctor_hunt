@@ -1,6 +1,6 @@
+import 'package:doctor_hunt/core/widgets/custom_svg_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/theming/app_styles.dart';
 
@@ -34,9 +34,8 @@ class CustomContainerForFacebookAndGoogle extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            //! TODO: Why you used here a svg image while we already have a custimzed widget?
-            SvgPicture.asset(
-              image,
+            CustomSVGImage(
+              asset: image,
               width: 18.17.w,
               height: 18.17.h,
             ),
