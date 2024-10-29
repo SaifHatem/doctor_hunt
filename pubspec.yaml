@@ -38,6 +38,7 @@ dependencies:
   flutter_svg: ^2.0.10+1
   font_awesome_flutter: ^10.7.0
   google_fonts: ^6.2.1
+  google_nav_bar: ^5.0.7
   smooth_page_indicator: ^1.2.0+3
 
 dev_dependencies:

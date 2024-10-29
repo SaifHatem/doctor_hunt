@@ -57,7 +57,7 @@ class SigninScreenBody extends StatelessWidget {
                     color: Colors.white,
                   ),
                   onPressed: () {
-                    Navigator.pushNamed(context, Routes.homeScreen);
+                    Navigator.pushNamed(context, Routes.bottomNavigationScreen);
                   },
                 ),
                 verticalSpace(27),
