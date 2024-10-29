@@ -1,5 +1,4 @@
-import 'package:doctor_hunt/features/home/ui/widgets/home_screen_body.dart';
-import 'package:flutter/material.dart';
+import 'package:doctor_hunt/core/helpers/route_export.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

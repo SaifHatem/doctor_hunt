@@ -1,4 +1,5 @@
 export 'package:doctor_hunt/core/helpers/app_strings.dart';
+export 'package:doctor_hunt/core/helpers/route_export.dart';
 export 'package:doctor_hunt/core/helpers/spacing.dart';
 export 'package:doctor_hunt/core/routing/routes.dart';
 export 'package:doctor_hunt/core/theming/app_colors.dart';
@@ -12,6 +13,11 @@ export 'package:doctor_hunt/features/auth/ui/widgets/signin_and_signup_row_metho
 export 'package:doctor_hunt/features/auth/ui/widgets/signin_custome_welcome.dart';
 export 'package:doctor_hunt/features/auth/ui/widgets/signup_screen_body.dart';
 export 'package:doctor_hunt/features/auth/ui/widgets/signup_terms.dart';
+export 'package:doctor_hunt/features/home/ui/widgets/featured_doctor_list_view.dart';
+export 'package:doctor_hunt/features/home/ui/widgets/home_screen_body.dart';
+export 'package:doctor_hunt/features/home/ui/widgets/popular_doctor_list_view.dart';
+export 'package:doctor_hunt/features/home/ui/widgets/search_text_field.dart';
+export 'package:doctor_hunt/features/home/ui/widgets/see_all_row.dart';
 export 'package:doctor_hunt/features/home/ui/widgets/star_rating.dart';
 export 'package:doctor_hunt/features/onboarding/ui/screens/intro_screen.dart';
 export 'package:doctor_hunt/features/onboarding/ui/widgets/intro_widget.dart';

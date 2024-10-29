@@ -1,7 +1,4 @@
 import 'package:doctor_hunt/core/helpers/route_export.dart';
-import 'package:doctor_hunt/features/home/ui/widgets/featured_doctor_list_view.dart';
-import 'package:doctor_hunt/features/home/ui/widgets/popular_doctor_list_view.dart';
-import 'package:doctor_hunt/features/home/ui/widgets/see_all_row.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({super.key});
@@ -20,20 +17,9 @@ class HomeScreenBody extends StatelessWidget {
         ),
         SingleChildScrollView(
           child: Column(
-            //mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                height: 156.h,
-                width: double.infinity,
-                decoration: const BoxDecoration(
-                  color: AppColors.primaryColor,
-                  borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(20),
-                    bottomLeft: Radius.circular(20),
-                  ),
-                ),
-              ),
+              const SearchTextField(),
               verticalSpace(54),
               verticalSpace(30),
               const SeeAllRow(
@@ -49,7 +35,10 @@ class HomeScreenBody extends StatelessWidget {
                 categoryName: 'Feature Doctor',
               ),
               verticalSpace(22),
-              FeaturedDoctorListView(),
+              Padding(
+                padding: EdgeInsets.only(left: 20.0.w),
+                child: FeaturedDoctorListView(),
+              ),
               verticalSpace(20),
             ],
           ),
