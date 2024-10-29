@@ -6,6 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class FeaturedDoctorListView extends StatelessWidget {
   FeaturedDoctorListView({super.key});
 
+  //! TODO: Make the list in a file alone and ensure strings in app strings
+
   final List<FeaturedDoctorModel> items = [
     FeaturedDoctorModel(
       doctorImage: 'assets/images/doctor.png',

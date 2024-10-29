@@ -14,6 +14,7 @@ class CustomFeaturedDoctorContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+        //! TODO: Colors Must Be In Colors File
         color: Colors.white.withOpacity(1),
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
@@ -31,6 +32,7 @@ class CustomFeaturedDoctorContainer extends StatelessWidget {
               featuredDoctorModel: featuredDoctorModel),
           ClipOval(
             child: Image.asset(
+              //! TODO: It is not responsive
               featuredDoctorModel.doctorImage,
               width: 100,
               height: 100,

@@ -28,5 +28,6 @@ export 'package:flutter_screenutil/flutter_screenutil.dart';
 export '../../features/auth/ui/screens/signup_screen.dart';
 export '../theming/app_styles.dart';
 
+//! TODO:  We add here only routes of screens
 
 //import 'package:doctor_hunt/core/helpers/route_export.dart';
