@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/signin_view_body.dart';
+import '../widgets/signin_screen_body.dart';
 
 class SigninScreen extends StatelessWidget {
   const SigninScreen({super.key});
@@ -8,7 +8,7 @@ class SigninScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: SigninViewBody(),
+      body: SigninScreenBody(),
     );
   }
 }

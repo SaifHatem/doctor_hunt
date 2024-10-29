@@ -6,7 +6,7 @@ class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: SignupViewBody(),
+      body: SignupScreenBody(),
     );
   }
 }

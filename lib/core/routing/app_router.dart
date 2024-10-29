@@ -1,4 +1,5 @@
 import 'package:doctor_hunt/core/helpers/route_export.dart';
+import 'package:doctor_hunt/features/home/ui/screens/home_view.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
@@ -14,6 +15,10 @@ class AppRouter {
       case Routes.signupScreen:
         return MaterialPageRoute(
           builder: (context) => const SignupScreen(),
+        );
+      case Routes.homeScreen:
+        return MaterialPageRoute(
+          builder: (context) => const HomeScreen(),
         );
 
       default:

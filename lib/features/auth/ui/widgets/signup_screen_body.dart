@@ -1,9 +1,7 @@
 import 'package:doctor_hunt/core/helpers/route_export.dart';
 
-class SigninViewBody extends StatelessWidget {
-  const SigninViewBody({
-    super.key,
-  });
+class SignupScreenBody extends StatelessWidget {
+  const SignupScreenBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,18 +15,6 @@ class SigninViewBody extends StatelessWidget {
             ),
           ),
         ),
-        // const Positioned.fill(
-        //   child: CustomSVGImage(
-        //     asset: 'assets/svgs/app_background.svg',
-        //     fit: BoxFit.cover,
-        //   ),
-        // ),
-        // Container(
-        //   child: SvgPicture.asset(
-        //     'assets/svgs/app_background.svg',
-        //     fit: BoxFit.cover,
-        //   ),
-        // ),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 12.0.w),
           child: SingleChildScrollView(
@@ -42,6 +28,10 @@ class SigninViewBody extends StatelessWidget {
                 const SigninAndSignupRowMethods(),
                 verticalSpace(37),
                 const AppTextFormField(
+                  hintText: AppStrings.name,
+                ),
+                verticalSpace(15),
+                const AppTextFormField(
                   hintText: AppStrings.email,
                 ),
                 verticalSpace(15),
@@ -49,29 +39,24 @@ class SigninViewBody extends StatelessWidget {
                   hintText: AppStrings.password,
                   isPasswordField: true,
                 ),
+                const SignupTerms(),
                 verticalSpace(32),
                 AppTextButton(
-                  verticalPadding: 10.h,
-                  buttonText: AppStrings.login,
+                  verticalPadding: 12.h,
+                  buttonText: AppStrings.signUp,
                   textStyle: AppStyles.font18Medium.copyWith(
                     color: Colors.white,
+                    fontSize: 14,
                   ),
                   onPressed: () {},
                 ),
                 verticalSpace(27),
-                Text(
-                  AppStrings.forgetPassword,
-                  style: AppStyles.font14Medium.copyWith(
-                      color: AppColors.primaryColor,
-                      fontWeight: FontWeight.w400),
-                ),
-                verticalSpace(40),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, Routes.signupScreen);
+                    Navigator.pop(context);
                   },
                   child: Text(
-                    AppStrings.dontHaveAccount,
+                    AppStrings.alreadyHaveAccount,
                     style: AppStyles.font14Medium.copyWith(
                         color: AppColors.primaryColor,
                         fontWeight: FontWeight.w400),

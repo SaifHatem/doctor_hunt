@@ -1,13 +1,14 @@
+import 'package:doctor_hunt/features/home/ui/widgets/home_screen_body.dart';
 import 'package:flutter/material.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: Text('Hello'),
+      body: SafeArea(
+        child: HomeScreenBody(),
       ),
     );
   }
