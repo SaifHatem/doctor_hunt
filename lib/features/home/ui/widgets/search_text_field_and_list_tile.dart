@@ -1,7 +1,7 @@
 import '../../../../core/helpers/route_export.dart';
 
-class SearchTextField extends StatelessWidget {
-  const SearchTextField({
+class SearchTextFieldAndListTile extends StatelessWidget {
+  const SearchTextFieldAndListTile({
     super.key,
   });
 
