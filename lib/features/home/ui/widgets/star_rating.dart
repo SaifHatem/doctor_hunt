@@ -27,7 +27,7 @@ class _StarRatingState extends State<StarRating> {
             Icons.star_rate_rounded,
             color: starIndex < _selectedRating
                 ? AppColors.starCplors
-                : Colors.grey,
+                : AppColors.nonSelectedStarCplors,
             size: 30,
           ),
         );

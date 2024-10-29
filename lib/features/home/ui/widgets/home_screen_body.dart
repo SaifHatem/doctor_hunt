@@ -1,5 +1,7 @@
 import 'package:doctor_hunt/core/helpers/route_export.dart';
+import 'package:doctor_hunt/features/home/ui/widgets/featured_doctor_list_view.dart';
 import 'package:doctor_hunt/features/home/ui/widgets/popular_doctor_list_view.dart';
+import 'package:doctor_hunt/features/home/ui/widgets/see_all_row.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({super.key});
@@ -34,32 +36,21 @@ class HomeScreenBody extends StatelessWidget {
               ),
               verticalSpace(54),
               verticalSpace(30),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.w),
-                child: Row(
-                  children: [
-                    Text(
-                      'Popular Doctor',
-                      style: AppStyles.font18Medium,
-                    ),
-                    const Spacer(),
-                    Text(
-                      'See all',
-                      style: AppStyles.font16Light.copyWith(fontSize: 12),
-                    ),
-                    const Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      size: 10,
-                      color: AppColors.greyColor,
-                    ),
-                  ],
-                ),
+              const SeeAllRow(
+                categoryName: 'Popular Doctor',
               ),
               verticalSpace(22),
               Padding(
                 padding: EdgeInsets.only(left: 20.0.w),
                 child: PopularDoctorListView(),
               ),
+              verticalSpace(30),
+              const SeeAllRow(
+                categoryName: 'Feature Doctor',
+              ),
+              verticalSpace(22),
+              FeaturedDoctorListView(),
+              verticalSpace(20),
             ],
           ),
         ),
