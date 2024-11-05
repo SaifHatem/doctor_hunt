@@ -16,7 +16,6 @@ class _StarRatingState extends State<StarRating> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: List.generate(5, (index) {
         int starIndex = index;
-
         return GestureDetector(
           onTap: () {
             setState(() {
