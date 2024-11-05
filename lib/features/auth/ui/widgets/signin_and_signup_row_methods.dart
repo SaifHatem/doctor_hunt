@@ -7,16 +7,21 @@ class SigninAndSignupRowMethods extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        CustomContainerForFacebookAndGoogle(
-          image: 'assets/svgs/google.svg',
-          text: 'Google',
+        const Expanded(
+          child: CustomContainerForFacebookAndGoogle(
+            image: 'assets/svgs/google.svg',
+            text: 'Google',
+          ),
         ),
-        CustomContainerForFacebookAndGoogle(
-          image: 'assets/svgs/facebook.svg',
-          text: 'Facebook',
+        horizontalSpace(15),
+        const Expanded(
+          child: CustomContainerForFacebookAndGoogle(
+            image: 'assets/svgs/facebook.svg',
+            text: 'Facebook',
+          ),
         ),
       ],
     );

@@ -12,7 +12,6 @@ class CustomContainerForFacebookAndGoogle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 160.w,
       height: 54.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12.r),

@@ -9,6 +9,10 @@ class AppStrings {
   static const String name = 'name';
   static const String email = 'email';
   static const String password = 'password';
+  static const String confirmPassword = 'confirm Password';
+
+  static const String phone = 'phone';
+  static const String gender = 'gender';
   static const String login = 'login';
   static const String signUp = 'sign up';
   static const String alreadyHaveAccount = 'Have an account? login';

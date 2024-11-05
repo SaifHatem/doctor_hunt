@@ -36,51 +36,61 @@ class AppTextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      style: ButtonStyle(
-        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(
-              borderRadius ?? 12.0.r,
+    return SizedBox(
+      width: 295.w,
+      height: 95.h,
+      child: TextButton(
+        style: ButtonStyle(
+          shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(
+                borderRadius ?? 12.0.r,
+              ),
             ),
           ),
+          // shape: WidgetStateProperty.all<RoundedRectangleBorder>(...): Sets the
+          // shape of the button to a rounded rectangle with a border radius. If
+          //borderRadius is not provided, it defaults to 16.0.r.
+          backgroundColor: WidgetStatePropertyAll(
+            backgroundColor ?? AppColors.primaryColor,
+          ),
+          // backgroundColor: WidgetStatePropertyAll(...): Sets the background
+          //color of the button. If backgroundColor is not provided, it defaults
+          // to DocSpotColorsManager.primaryBlueColor.
+
+          //!
+          // padding: WidgetStateProperty.all<EdgeInsets>(
+          //   EdgeInsets.symmetric(
+          //     horizontal: horizontalPadding?.w ?? 122.w,
+          //     vertical: verticalPadding?.h ?? 18.h,
+          //   ),
+          // ),
+          //   // padding: WidgetStateProperty.all<EdgeInsets>(...): Sets the padding
+          //   //inside the button. If horizontalPadding or verticalPadding are not
+          //   // provided, they default to 12.w and 14.h respectively.
+          // ),
+
+          //!
+          // fixedSize: WidgetStateProperty.all(
+          //   Size(
+          //     buttonWidth?.w ?? 295.w,
+          //     buttonHeight?.h ?? 54.h,
+          //   ),
+          // ),
+          // fixedSize: WidgetStateProperty.all(...): Sets the fixed size of the
+          //button. If buttonWidth or buttonHeight are not provided, they default
+          //to double.maxFinite and 50.h respectively.
         ),
-        // shape: WidgetStateProperty.all<RoundedRectangleBorder>(...): Sets the
-        // shape of the button to a rounded rectangle with a border radius. If
-        //borderRadius is not provided, it defaults to 16.0.r.
-        backgroundColor: WidgetStatePropertyAll(
-          backgroundColor ?? AppColors.primaryColor,
-        ),
-        // backgroundColor: WidgetStatePropertyAll(...): Sets the background
-        //color of the button. If backgroundColor is not provided, it defaults
-        // to DocSpotColorsManager.primaryBlueColor.
-        padding: WidgetStateProperty.all<EdgeInsets>(
-          EdgeInsets.symmetric(
-            horizontal: horizontalPadding?.w ?? 122.w,
-            vertical: verticalPadding?.h ?? 18.h,
+        onPressed: onPressed,
+        // onPressed: onPressed: Sets the callback function to be executed when
+        // the button is pressed.
+        child: Center(
+          child: Text(
+            buttonText,
+            style: textStyle,
+            overflow: TextOverflow.ellipsis,
           ),
         ),
-        //   // padding: WidgetStateProperty.all<EdgeInsets>(...): Sets the padding
-        //   //inside the button. If horizontalPadding or verticalPadding are not
-        //   // provided, they default to 12.w and 14.h respectively.
-        // ),
-        fixedSize: WidgetStateProperty.all(
-          Size(
-            buttonWidth?.w ?? 295.w,
-            buttonHeight?.h ?? 54.h,
-          ),
-        ),
-        // fixedSize: WidgetStateProperty.all(...): Sets the fixed size of the
-        //button. If buttonWidth or buttonHeight are not provided, they default
-        //to double.maxFinite and 50.h respectively.
-      ),
-      onPressed: onPressed,
-      // onPressed: onPressed: Sets the callback function to be executed when
-      // the button is pressed.
-      child: Text(
-        buttonText,
-        style: textStyle,
-        overflow: TextOverflow.ellipsis,
       ),
     );
   }
