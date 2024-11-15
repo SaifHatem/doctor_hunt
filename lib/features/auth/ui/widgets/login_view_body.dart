@@ -1,4 +1,5 @@
 import '../../../../core/helpers/route_export.dart';
+import '../../../../core/widgets/custom_snack_bar.dart';
 import '../../logic/cubits/user_cubit.dart';
 import '../../logic/cubits/user_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -14,12 +15,42 @@ class LoginViewBody extends StatelessWidget {
       listener: (context, state) {
         if (state is SignInSuccess) {
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Success')),
+            const SnackBar(
+              content: CustomSnackBar(
+                icon: Icon(
+                  Icons.check_rounded,
+                  color: Colors.white,
+                  size: 24,
+                ),
+                topSvgColor: Color.fromARGB(255, 19, 128, 64),
+                bottomSvgColor: Color.fromARGB(255, 19, 128, 64),
+                containerColor: AppColors.primaryColor,
+                title: 'Great!',
+                errorText: 'Login Successfully',
+              ),
+              behavior: SnackBarBehavior.floating,
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+            ),
           );
         } else if (state is SignInFailure) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              content: Text(state.errorMessage),
+              content: CustomSnackBar(
+                icon: const Icon(
+                  Icons.close_rounded,
+                  color: Colors.white,
+                  size: 20,
+                ),
+                topSvgColor: const Color(0xff801336),
+                bottomSvgColor: const Color(0xff801336),
+                containerColor: const Color(0xffc72c41),
+                title: 'Error!',
+                errorText: state.errorMessage,
+              ),
+              behavior: SnackBarBehavior.floating,
+              backgroundColor: Colors.transparent,
+              elevation: 0,
             ),
           );
         }

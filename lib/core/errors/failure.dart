@@ -52,11 +52,10 @@ class ServerFailure extends Failure {
       return ServerFailure('Internal Server error, Please try later');
     } else if (statusCode == 422) {
       String errorDetails = '';
-
       if (response['data'] is Map) {
         (response['data'] as Map).forEach((key, value) {
           if (value is List) {
-            errorDetails += '$key: ${value.join(', ')}\n';
+            errorDetails += '${value.join(', ')}\n';
           }
         });
       }
