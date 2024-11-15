@@ -84,7 +84,10 @@ class RegisterViewBody extends StatelessWidget {
                       const RegisterTerms(),
                       verticalSpace(32),
                       state is SignUpLoading
-                          ? const CircularProgressIndicator()
+                          ? const CircularProgressIndicator(
+                              valueColor: AlwaysStoppedAnimation(
+                                  AppColors.primaryColor),
+                            )
                           : AppTextButton(
                               //verticalPadding: 12.h,
                               buttonText: AppStrings.signUp,

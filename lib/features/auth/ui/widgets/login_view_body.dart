@@ -62,7 +62,10 @@ class LoginViewBody extends StatelessWidget {
                       ),
                       verticalSpace(32),
                       state is SignInLoading
-                          ? const CircularProgressIndicator()
+                          ? const CircularProgressIndicator(
+                              valueColor: AlwaysStoppedAnimation(
+                                  AppColors.primaryColor),
+                            )
                           : AppTextButton(
                               //verticalPadding: 10.h,
                               buttonText: AppStrings.login,
