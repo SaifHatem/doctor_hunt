@@ -1,4 +1,4 @@
-import 'package:doctor_hunt/core/api/endpoints.dart';
+import '../../../../../core/api/endpoints.dart';
 import 'package:equatable/equatable.dart';
 
 class Data extends Equatable {

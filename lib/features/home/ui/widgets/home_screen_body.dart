@@ -1,4 +1,4 @@
-import 'package:doctor_hunt/core/helpers/route_export.dart';
+import '../../../../core/helpers/route_export.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({super.key});
@@ -24,7 +24,7 @@ class HomeScreenBody extends StatelessWidget {
               verticalSpace(54),
               verticalSpace(30),
               const SeeAllRow(
-                //! Nice Refactored Row 
+                //! Nice Refactored Row
                 categoryName: 'Popular Doctor',
               ),
               verticalSpace(22),

@@ -1,4 +1,4 @@
-import 'package:doctor_hunt/core/theming/app_colors.dart';
+import '../theming/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -38,7 +38,7 @@ class AppTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 295.w,
-      height: 95.h,
+      height: 54.h,
       child: TextButton(
         style: ButtonStyle(
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(

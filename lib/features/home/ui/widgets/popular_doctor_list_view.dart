@@ -1,5 +1,5 @@
-import 'package:doctor_hunt/features/home/data/models/popular_doctor_model.dart';
-import 'package:doctor_hunt/features/home/ui/widgets/custom_popular_doctor_container.dart';
+import '../../data/models/popular_doctor_model.dart';
+import 'custom_popular_doctor_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

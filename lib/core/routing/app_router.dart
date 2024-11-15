@@ -1,7 +1,7 @@
-import 'package:doctor_hunt/core/helpers/route_export.dart';
-import 'package:doctor_hunt/core/widgets/bottom_navigation_bar.dart';
-import 'package:doctor_hunt/features/home/ui/screens/home_view.dart';
-import 'package:doctor_hunt/features/settings/ui/screens/settings_screen.dart';
+import '../helpers/route_export.dart';
+import '../widgets/bottom_navigation_bar.dart';
+import '../../features/home/ui/screens/home_view.dart';
+import '../../features/settings/ui/screens/settings_screen.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {

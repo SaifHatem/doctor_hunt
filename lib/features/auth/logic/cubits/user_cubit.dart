@@ -1,5 +1,5 @@
-import 'package:doctor_hunt/features/auth/data/repos/auth_repo.dart';
-import 'package:doctor_hunt/features/auth/logic/cubits/user_state.dart';
+import '../../data/repos/auth_repo.dart';
+import 'user_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -59,30 +59,4 @@ class UserCubit extends Cubit<UserState> {
       (signInModel) => emit(SignInSuccess()),
     );
   }
-
-  // signup() async {
-  //   try {
-  //     emit(SignUpLoading());
-  //     final response =
-  //         await api.post(Endpoints.register, isFromData: true, data: {
-  //       ApiKey.name = signUpName.text,
-  //       ApiKey.email = signUpEmail.text,
-  //       ApiKey.name = signUpName.text,
-  //       ApiKey.phone = signUpPhoneNumber.text,
-  //       ApiKey.gender = signUpGender.text,
-  //       ApiKey.password = signUpPassword.text,
-  //       ApiKey.password_confirmation = confirmPassword.text,
-  //     });
-  //     emit(SignUpSuccess(message: "Created Successfully"));
-  //   } on ServerException catch (e) {
-  //     emit(SignUpFailure(
-  //         errorMessage:
-  //             e.errModel.message ?? 'An unexpected error occurredddd'));
-  //   }
-  // }
-  // getUserProfile() async {
-  //   final result = await authRepo.getUserProfile();
-  //   result.fold((failure) => GetUserFailure(errorMessage: failure.errMessage),
-  //       (user) => GetUserSuccess(userModel: user));
-  // }
 }

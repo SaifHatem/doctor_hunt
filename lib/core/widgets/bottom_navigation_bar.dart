@@ -1,6 +1,6 @@
-import 'package:doctor_hunt/core/helpers/route_export.dart';
-import 'package:doctor_hunt/features/home/ui/screens/home_view.dart';
-import 'package:doctor_hunt/features/settings/ui/screens/settings_screen.dart';
+import '../helpers/route_export.dart';
+import '../../features/home/ui/screens/home_view.dart';
+import '../../features/settings/ui/screens/settings_screen.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 class BottomNavigationScreen extends StatefulWidget {

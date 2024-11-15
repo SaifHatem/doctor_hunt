@@ -1,6 +1,6 @@
-import 'package:doctor_hunt/core/helpers/route_export.dart';
-import 'package:doctor_hunt/features/home/data/models/featured_doctor_model.dart';
-import 'package:doctor_hunt/features/home/ui/widgets/custom_ratin_for_featured_doctor.dart';
+import '../../../../core/helpers/route_export.dart';
+import '../../data/models/featured_doctor_model.dart';
+import 'custom_ratin_for_featured_doctor.dart';
 
 class CustomFeaturedDoctorContainer extends StatelessWidget {
   const CustomFeaturedDoctorContainer({

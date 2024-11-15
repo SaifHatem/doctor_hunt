@@ -1,4 +1,4 @@
-import 'package:doctor_hunt/core/helpers/route_export.dart';
+import '../../../../core/helpers/route_export.dart';
 
 class SignupTerms extends StatelessWidget {
   const SignupTerms({

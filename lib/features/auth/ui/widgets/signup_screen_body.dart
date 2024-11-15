@@ -1,6 +1,6 @@
-import 'package:doctor_hunt/core/helpers/route_export.dart';
-import 'package:doctor_hunt/features/auth/logic/cubits/user_cubit.dart';
-import 'package:doctor_hunt/features/auth/logic/cubits/user_state.dart';
+import '../../../../core/helpers/route_export.dart';
+import '../../logic/cubits/user_cubit.dart';
+import '../../logic/cubits/user_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignupScreenBody extends StatelessWidget {
@@ -10,11 +10,14 @@ class SignupScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<UserCubit, UserState>(
       listener: (context, state) {
-        if (state is SignInSuccess) {
+        if (state is SignUpSuccess) {
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Register Success')),
+            const SnackBar(
+              content: Text('Register Success'),
+            ),
           );
-        } else if (state is SignInFailure) {
+          Navigator.pop(context);
+        } else if (state is SignUpFailure) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text(state.errorMessage),
@@ -34,7 +37,7 @@ class SignupScreenBody extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 12.0.w),
+              padding: EdgeInsets.symmetric(horizontal: 15.w),
               child: SingleChildScrollView(
                 child: Form(
                   key: context.read<UserCubit>().signUpFormKey,

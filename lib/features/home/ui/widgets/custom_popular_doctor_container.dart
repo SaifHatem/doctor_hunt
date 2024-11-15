@@ -1,5 +1,5 @@
-import 'package:doctor_hunt/core/helpers/route_export.dart';
-import 'package:doctor_hunt/features/home/data/models/popular_doctor_model.dart';
+import '../../../../core/helpers/route_export.dart';
+import '../../data/models/popular_doctor_model.dart';
 
 class CustomPopularDoctorContainer extends StatelessWidget {
   const CustomPopularDoctorContainer({

@@ -17,7 +17,7 @@ class ApiKey {
   static String code = 'code';
   static String email = 'email';
   static String password = 'password';
-  static String password_confirmation = 'password_confirmation';
+  static String passwordConfirmation = 'password_confirmation';
   static String name = 'name';
   static String phone = 'phone';
   static String gender = 'gender';

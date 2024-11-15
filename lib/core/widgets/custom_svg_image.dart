@@ -27,6 +27,7 @@ class CustomSVGImage extends StatelessWidget {
         asset,
         fit: BoxFit.fill,
         matchTextDirection: matchTextDirection,
+        // ignore: deprecated_member_use
         color: color,
       );
     }
@@ -36,6 +37,8 @@ class CustomSVGImage extends StatelessWidget {
         width: width ?? 0,
         height: height ?? 0,
         asset,
+
+        // ignore:deprecated_member_use
         color: color,
         fit: fit,
         matchTextDirection: matchTextDirection,

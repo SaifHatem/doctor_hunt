@@ -1,6 +1,6 @@
-import 'package:doctor_hunt/core/helpers/route_export.dart';
-import 'package:doctor_hunt/features/auth/logic/cubits/user_cubit.dart';
-import 'package:doctor_hunt/features/auth/logic/cubits/user_state.dart';
+import '../../../../core/helpers/route_export.dart';
+import '../../logic/cubits/user_cubit.dart';
+import '../../logic/cubits/user_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SigninScreenBody extends StatelessWidget {
@@ -35,18 +35,6 @@ class SigninScreenBody extends StatelessWidget {
                 ),
               ),
             ),
-            // const Positioned.fill(
-            //   child: CustomSVGImage(
-            //     asset: 'assets/svgs/app_background.svg',
-            //     fit: BoxFit.cover,
-            //   ),
-            // ),
-            // Container(
-            //   child: SvgPicture.asset(
-            //     'assets/svgs/app_background.svg',
-            //     fit: BoxFit.cover,
-            //   ),
-            // ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 12.0.w),
               child: SingleChildScrollView(
