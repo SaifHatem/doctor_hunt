@@ -1,7 +1,7 @@
 import '../../../../core/helpers/route_export.dart';
 
-class SigninCustomWelcomeTxt extends StatelessWidget {
-  const SigninCustomWelcomeTxt({
+class LoginCustomWelcomeText extends StatelessWidget {
+  const LoginCustomWelcomeText({
     super.key,
   });
 

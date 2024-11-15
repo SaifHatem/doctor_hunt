@@ -12,7 +12,7 @@ class AuthRepoImpl implements AuthRepo {
   AuthRepoImpl(this.apiService);
 
   @override
-  Future<Either<String, LoginModel>> signIn(
+  Future<Either<String, LoginModel>> login(
       {required String email, required String password}) async {
     try {
       final response = await apiService.post(

@@ -1,7 +1,7 @@
 import '../../../../core/helpers/route_export.dart';
 
-class SigninAndSignupRowMethods extends StatelessWidget {
-  const SigninAndSignupRowMethods({
+class LoginAndRegisterRowMethods extends StatelessWidget {
+  const LoginAndRegisterRowMethods({
     super.key,
   });
 

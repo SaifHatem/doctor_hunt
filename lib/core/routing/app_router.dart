@@ -12,11 +12,11 @@ class AppRouter {
         );
       case Routes.signinScreen:
         return MaterialPageRoute(
-          builder: (context) => const SigninScreen(),
+          builder: (context) => const LoginView(),
         );
       case Routes.signupScreen:
         return MaterialPageRoute(
-          builder: (context) => const SignupScreen(),
+          builder: (context) => const RegisterScreen(),
         );
       case Routes.homeScreen:
         return MaterialPageRoute(

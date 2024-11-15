@@ -1,7 +1,7 @@
 import '../../../../core/helpers/route_export.dart';
 
-class SignupTerms extends StatelessWidget {
-  const SignupTerms({
+class RegisterTerms extends StatelessWidget {
+  const RegisterTerms({
     super.key,
   });
 

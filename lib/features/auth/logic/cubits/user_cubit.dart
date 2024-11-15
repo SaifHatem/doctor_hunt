@@ -50,7 +50,7 @@ class UserCubit extends Cubit<UserState> {
 
   signIn() async {
     emit(SignInLoading());
-    final response = await authRepo.signIn(
+    final response = await authRepo.login(
       email: signInEmail.text,
       password: signInPassword.text,
     );

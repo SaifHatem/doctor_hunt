@@ -3,8 +3,8 @@ import '../../logic/cubits/user_cubit.dart';
 import '../../logic/cubits/user_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class SigninScreenBody extends StatelessWidget {
-  const SigninScreenBody({
+class LoginViewBody extends StatelessWidget {
+  const LoginViewBody({
     super.key,
   });
 
@@ -45,9 +45,9 @@ class SigninScreenBody extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       verticalSpace(127),
-                      const SigninCustomWelcomeTxt(),
+                      const LoginCustomWelcomeText(),
                       verticalSpace(124),
-                      const SigninAndSignupRowMethods(),
+                      const LoginAndRegisterRowMethods(),
                       verticalSpace(37),
                       AppTextFormField(
                         controller: context.read<UserCubit>().signInEmail,
