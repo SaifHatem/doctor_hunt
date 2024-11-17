@@ -33,6 +33,7 @@ class LoginViewBody extends StatelessWidget {
               elevation: 0,
             ),
           );
+          Navigator.pushNamed(context, Routes.homeScreen);
         } else if (state is SignInFailure) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
