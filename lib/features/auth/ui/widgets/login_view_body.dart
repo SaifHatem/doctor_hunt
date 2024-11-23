@@ -1,8 +1,18 @@
+import '../../../../core/helpers/app_strings.dart';
 import '../../../../core/helpers/route_export.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/routing/routes.dart';
+import '../../../../core/theming/app_colors.dart';
+import '../../../../core/theming/app_styles.dart';
+import '../../../../core/widgets/app_text_button.dart';
 import '../../../../core/widgets/custom_snack_bar.dart';
+import '../../../../core/widgets/text_form_field.dart';
 import '../../logic/cubits/user_cubit.dart';
 import '../../logic/cubits/user_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'login_and_register_row_methods.dart';
+import 'login_custome_welcome_text.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({

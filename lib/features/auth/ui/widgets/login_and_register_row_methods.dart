@@ -1,4 +1,6 @@
 import '../../../../core/helpers/route_export.dart';
+import '../../../../core/helpers/spacing.dart';
+import 'custom_container_for_facebook_and_google.dart';
 
 class LoginAndRegisterRowMethods extends StatelessWidget {
   const LoginAndRegisterRowMethods({

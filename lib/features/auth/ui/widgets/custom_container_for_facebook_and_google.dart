@@ -1,4 +1,6 @@
 import '../../../../core/helpers/route_export.dart';
+import '../../../../core/theming/app_styles.dart';
+import '../../../../core/widgets/custom_svg_image.dart';
 
 class CustomContainerForFacebookAndGoogle extends StatelessWidget {
   const CustomContainerForFacebookAndGoogle({

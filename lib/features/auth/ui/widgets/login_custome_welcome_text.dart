@@ -1,4 +1,7 @@
+import '../../../../core/helpers/app_strings.dart';
 import '../../../../core/helpers/route_export.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theming/app_styles.dart';
 
 class LoginCustomWelcomeText extends StatelessWidget {
   const LoginCustomWelcomeText({

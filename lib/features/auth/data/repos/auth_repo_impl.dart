@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:doctor_hunt/core/secure/secure_storage_service.dart';
 import '../../../../core/api/dio_consumer.dart';
 import '../../../../core/api/endpoints.dart';
 import '../../../../core/errors/failure.dart';
@@ -8,8 +9,12 @@ import 'auth_repo.dart';
 
 class AuthRepoImpl implements AuthRepo {
   final DioConsumer apiService;
+  final SecureStorageService secureStorageService;
 
-  AuthRepoImpl(this.apiService);
+  AuthRepoImpl(
+    this.apiService,
+    this.secureStorageService,
+  );
 
   @override
   Future<Either<String, LoginModel>> login(
@@ -23,6 +28,8 @@ class AuthRepoImpl implements AuthRepo {
         },
       );
       final user = LoginModel.fromJson(response);
+      // Store the token securely using SecureStorageService
+      await secureStorageService.setValue(ApiKey.token, user.data!.token ?? "");
       return Right(user);
     } on ServerFailure catch (e) {
       return Left(e.errorMessage);
@@ -51,6 +58,13 @@ class AuthRepoImpl implements AuthRepo {
         },
       );
       final registerModel = RegisterModel.fromJson(response);
+
+      // Store the token securely (if token is provided after registration)
+      if (registerModel.data!.token != null) {
+        await secureStorageService.setValue(
+            ApiKey.token, registerModel.data!.token!);
+      }
+
       return Right(registerModel);
     } on ServerFailure catch (e) {
       return Left(e.errorMessage);

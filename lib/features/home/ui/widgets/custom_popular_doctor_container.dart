@@ -1,5 +1,8 @@
 import '../../../../core/helpers/route_export.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theming/app_styles.dart';
 import '../../data/models/popular_doctor_model.dart';
+import 'star_rating.dart';
 
 class CustomPopularDoctorContainer extends StatelessWidget {
   const CustomPopularDoctorContainer({

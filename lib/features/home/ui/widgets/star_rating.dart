@@ -1,13 +1,15 @@
+import 'package:doctor_hunt/core/theming/app_colors.dart';
+
 import '../../../../core/helpers/route_export.dart';
 
 class StarRating extends StatefulWidget {
   const StarRating({super.key});
 
   @override
-  _StarRatingState createState() => _StarRatingState();
+  StarRatingState createState() => StarRatingState();
 }
 
-class _StarRatingState extends State<StarRating> {
+class StarRatingState extends State<StarRating> {
   int _selectedRating = 0;
 
   @override

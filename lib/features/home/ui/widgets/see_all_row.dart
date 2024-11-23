@@ -1,4 +1,6 @@
 import '../../../../core/helpers/route_export.dart';
+import '../../../../core/theming/app_colors.dart';
+import '../../../../core/theming/app_styles.dart';
 
 class SeeAllRow extends StatelessWidget {
   const SeeAllRow({

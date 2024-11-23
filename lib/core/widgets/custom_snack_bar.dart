@@ -2,6 +2,8 @@ import 'package:doctor_hunt/core/helpers/assets.dart';
 import 'package:doctor_hunt/core/helpers/route_export.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../helpers/spacing.dart';
+
 class CustomSnackBar extends StatelessWidget {
   const CustomSnackBar({
     super.key,

@@ -37,5 +37,9 @@ class Assets {
   /// Assets for svgsProfileImage
   /// assets/svgs/profile_image.svg
   static const String svgsProfileImage = "assets/svgs/profile_image.svg";
+
+  /// Assets for svgsScreenBackground
+  /// assets/svgs/screen_background.png
+  static const String svgsScreenBackground = "assets/svgs/screen_background.png";
 }
 

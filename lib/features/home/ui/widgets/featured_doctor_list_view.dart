@@ -1,51 +1,11 @@
-import '../../data/models/featured_doctor_model.dart';
 import 'custom_featured_doctor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'featured_doctors_list.dart';
+
 class FeaturedDoctorListView extends StatelessWidget {
-  FeaturedDoctorListView({super.key});
-
-  //! TODO: Make the list in a file alone and ensure strings in app strings
-
-  final List<FeaturedDoctorModel> items = [
-    FeaturedDoctorModel(
-      doctorImage: 'assets/images/doctor.png',
-      doctorName: 'Dr. Crick',
-      rating: '3.7',
-      price: '25.00/hours',
-    ),
-    FeaturedDoctorModel(
-      doctorImage: 'assets/images/doctor2.png',
-      doctorName: 'Dr. Strain',
-      rating: '3',
-      price: '22.00/hours',
-    ),
-    FeaturedDoctorModel(
-      doctorImage: 'assets/images/doctor.png',
-      doctorName: 'Dr. Crick',
-      rating: '3.7',
-      price: '25.00/hours',
-    ),
-    FeaturedDoctorModel(
-      doctorImage: 'assets/images/doctor2.png',
-      doctorName: 'Dr. Strain',
-      rating: '3',
-      price: '22.00/hours',
-    ),
-    FeaturedDoctorModel(
-      doctorImage: 'assets/images/doctor.png',
-      doctorName: 'Dr. Crick',
-      rating: '3.7',
-      price: '25.00/hours',
-    ),
-    FeaturedDoctorModel(
-      doctorImage: 'assets/images/doctor2.png',
-      doctorName: 'Dr. Strain',
-      rating: '3',
-      price: '22.00/hours',
-    ),
-  ];
+  const FeaturedDoctorListView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +18,7 @@ class FeaturedDoctorListView extends StatelessWidget {
           return Padding(
             padding: EdgeInsets.only(right: 15.0.w),
             child: CustomFeaturedDoctorContainer(
-              featuredDoctorModel: items[index],
+              featuredDoctorModel: featuredDoctors[index],
             ),
           );
         },

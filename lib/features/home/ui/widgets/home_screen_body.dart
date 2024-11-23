@@ -1,4 +1,12 @@
+import 'package:doctor_hunt/core/helpers/images_strings.dart';
+
+import '../../../../core/helpers/app_strings.dart';
 import '../../../../core/helpers/route_export.dart';
+import '../../../../core/helpers/spacing.dart';
+import 'featured_doctor_list_view.dart';
+import 'popular_doctor_list_view.dart';
+import 'search_text_field_and_list_tile.dart';
+import 'see_all_row.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({super.key});
@@ -10,8 +18,7 @@ class HomeScreenBody extends StatelessWidget {
         Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-              //! TODO: Add Assets IN Asset File
-              image: AssetImage('assets/images/screen_background.png'),
+              image: AssetImage(AppImagesStrings.imageScreenBackground),
               fit: BoxFit.cover,
             ),
           ),
@@ -24,23 +31,21 @@ class HomeScreenBody extends StatelessWidget {
               verticalSpace(54),
               verticalSpace(30),
               const SeeAllRow(
-                //! Nice Refactored Row
-                categoryName: 'Popular Doctor',
+                categoryName: AppStrings.homeViewPopularDoctor,
               ),
               verticalSpace(22),
               Padding(
                 padding: EdgeInsets.only(left: 20.0.w),
-                child: PopularDoctorListView(),
+                child: const PopularDoctorListView(),
               ),
               verticalSpace(30),
               const SeeAllRow(
-                //! TODO: Add Strings In Strings File
-                categoryName: 'Feature Doctor',
+                categoryName: AppStrings.homeViewFeatureDoctor,
               ),
               verticalSpace(22),
               Padding(
                 padding: EdgeInsets.only(left: 20.0.w),
-                child: FeaturedDoctorListView(),
+                child: const FeaturedDoctorListView(),
               ),
               verticalSpace(20),
             ],

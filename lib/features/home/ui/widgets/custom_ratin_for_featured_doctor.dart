@@ -1,4 +1,6 @@
 import '../../../../core/helpers/route_export.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theming/app_colors.dart';
 import '../../data/models/featured_doctor_model.dart';
 
 class CustomRatingForFeatureDoctor extends StatefulWidget {

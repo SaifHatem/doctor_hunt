@@ -3,6 +3,8 @@ import '../../features/home/ui/screens/home_view.dart';
 import '../../features/settings/ui/screens/settings_screen.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
+import '../theming/app_colors.dart';
+
 class BottomNavigationScreen extends StatefulWidget {
   const BottomNavigationScreen({super.key});
 

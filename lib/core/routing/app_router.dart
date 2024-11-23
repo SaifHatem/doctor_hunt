@@ -1,3 +1,6 @@
+import 'package:doctor_hunt/core/routing/routes.dart';
+
+import '../../features/auth/ui/views/login_view.dart';
 import '../helpers/route_export.dart';
 import '../widgets/bottom_navigation_bar.dart';
 import '../../features/home/ui/screens/home_view.dart';

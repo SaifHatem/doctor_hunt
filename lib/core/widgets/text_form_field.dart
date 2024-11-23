@@ -47,10 +47,10 @@ class AppTextFormField extends StatefulWidget {
   });
 
   @override
-  _AppTextFormFieldState createState() => _AppTextFormFieldState();
+  AppTextFormFieldState createState() => AppTextFormFieldState();
 }
 
-class _AppTextFormFieldState extends State<AppTextFormField> {
+class AppTextFormFieldState extends State<AppTextFormField> {
   bool _isObscureText = true; // State variable for password visibility
 
   @override

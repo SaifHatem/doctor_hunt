@@ -9,4 +9,5 @@ class AppColors {
   static const Color lightBlack = Color(0xff333333);
   static const Color starCplors = Color(0xffF6D060);
   static const Color nonSelectedStarCplors = Color(0xffE2E5EA);
+  static Color whiteWithOpacity = Colors.white.withOpacity(1);
 }

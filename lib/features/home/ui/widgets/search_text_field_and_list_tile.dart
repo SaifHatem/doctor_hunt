@@ -1,4 +1,7 @@
 import '../../../../core/helpers/route_export.dart';
+import '../../../../core/theming/app_colors.dart';
+import '../../../../core/theming/app_styles.dart';
+import '../../../../core/widgets/text_form_field.dart';
 
 class SearchTextFieldAndListTile extends StatelessWidget {
   const SearchTextFieldAndListTile({
@@ -46,11 +49,9 @@ class SearchTextFieldAndListTile extends StatelessWidget {
               ),
               subtitle: Text(
                 'Find Your Doctor',
-                //! TODO: Use custom Font Styels File
-                //! TODO:  Use Colors File
                 style: AppStyles.font16Light.copyWith(
                   fontSize: 25,
-                  color: const Color(0xffFAFAFA),
+                  color: AppColors.nonSelectedStarCplors,
                   fontWeight: FontWeight.bold,
                 ),
               ),

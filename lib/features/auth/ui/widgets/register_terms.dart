@@ -1,4 +1,7 @@
+import '../../../../core/helpers/app_strings.dart';
 import '../../../../core/helpers/route_export.dart';
+import '../../../../core/theming/app_styles.dart';
+import 'custom_checkbox.dart';
 
 class RegisterTerms extends StatelessWidget {
   const RegisterTerms({

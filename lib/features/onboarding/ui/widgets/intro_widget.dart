@@ -1,3 +1,7 @@
+import 'package:doctor_hunt/core/routing/routes.dart';
+import 'package:doctor_hunt/core/theming/app_styles.dart';
+import 'package:doctor_hunt/core/widgets/app_text_button.dart';
+
 import '../../../../core/helpers/route_export.dart';
 
 class IntroWidget extends StatelessWidget {

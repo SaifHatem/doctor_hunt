@@ -1,4 +1,6 @@
 import '../../../../core/helpers/route_export.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theming/app_colors.dart';
 import '../../data/models/featured_doctor_model.dart';
 import 'custom_ratin_for_featured_doctor.dart';
 
@@ -14,8 +16,7 @@ class CustomFeaturedDoctorContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        //! TODO: Colors Must Be In Colors File
-        color: Colors.white.withOpacity(1),
+        color: AppColors.whiteWithOpacity,
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
@@ -32,10 +33,9 @@ class CustomFeaturedDoctorContainer extends StatelessWidget {
               featuredDoctorModel: featuredDoctorModel),
           ClipOval(
             child: Image.asset(
-              //! TODO: It is not responsive
               featuredDoctorModel.doctorImage,
-              width: 100,
-              height: 100,
+              width: 100.w,
+              height: 100.h,
               fit: BoxFit.cover,
             ),
           ),

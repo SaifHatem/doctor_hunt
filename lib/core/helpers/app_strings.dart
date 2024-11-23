@@ -20,4 +20,7 @@ class AppStrings {
   static const String dontHaveAccount = 'Don\'t have an account? Join us';
   static const String iAgreeWithTerms =
       'I agree with the Terms of Service & Privacy Policy';
+
+  static const String homeViewPopularDoctor = 'Popular Doctor';
+  static const String homeViewFeatureDoctor = 'Feature Doctor';
 }

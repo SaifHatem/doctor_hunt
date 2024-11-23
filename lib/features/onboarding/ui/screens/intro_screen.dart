@@ -1,3 +1,8 @@
+import 'dart:ui';
+
+import 'package:doctor_hunt/core/routing/routes.dart';
+import 'package:doctor_hunt/features/onboarding/ui/widgets/intro_widget.dart';
+
 import '../../../../core/helpers/route_export.dart';
 
 class AppScrollBehavior extends MaterialScrollBehavior {

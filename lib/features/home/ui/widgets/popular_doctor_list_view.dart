@@ -1,43 +1,11 @@
-import '../../data/models/popular_doctor_model.dart';
+import 'package:doctor_hunt/features/home/ui/widgets/popular_doctors_list.dart';
+
 import 'custom_popular_doctor_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PopularDoctorListView extends StatelessWidget {
-  PopularDoctorListView({super.key});
-//! TODO:  Make the list in a seperated file
-  final List<PopularDoctorModel> items = [
-    PopularDoctorModel(
-      doctorImage: 'assets/images/doctor.png',
-      doctorName: 'Dr. Fillerup Grab',
-      doctorMajor: 'Medicine Specialist',
-    ),
-    PopularDoctorModel(
-      doctorImage: 'assets/images/doctor2.png',
-      doctorName: 'Dr. Blessing',
-      doctorMajor: 'Dentist Specialist',
-    ),
-    PopularDoctorModel(
-      doctorImage: 'assets/images/doctor.png',
-      doctorName: 'Dr. Fillerup Grab',
-      doctorMajor: 'Medicine Specialist',
-    ),
-    PopularDoctorModel(
-      doctorImage: 'assets/images/doctor2.png',
-      doctorName: 'Dr. Blessing',
-      doctorMajor: 'Dentist Specialist',
-    ),
-    PopularDoctorModel(
-      doctorImage: 'assets/images/doctor.png',
-      doctorName: 'Dr. Fillerup Grab',
-      doctorMajor: 'Medicine Specialist',
-    ),
-    PopularDoctorModel(
-      doctorImage: 'assets/images/doctor2.png',
-      doctorName: 'Dr. Blessing',
-      doctorMajor: 'Dentist Specialist',
-    ),
-  ];
+  const PopularDoctorListView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +18,7 @@ class PopularDoctorListView extends StatelessWidget {
           return Padding(
             padding: EdgeInsets.only(right: 15.0.w),
             child: CustomPopularDoctorContainer(
-              popularDoctorModel: items[index],
+              popularDoctorModel: popularDoctors[index],
             ),
           );
         },
