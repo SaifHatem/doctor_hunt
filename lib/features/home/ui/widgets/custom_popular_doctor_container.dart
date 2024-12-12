@@ -1,16 +1,19 @@
+import 'package:doctor_hunt/features/home/data/models/all_doctors_model/all_doctor_model.dart';
+
 import '../../../../core/helpers/route_export.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_styles.dart';
-import '../../data/models/popular_doctor_model.dart';
 import 'star_rating.dart';
 
 class CustomPopularDoctorContainer extends StatelessWidget {
   const CustomPopularDoctorContainer({
     super.key,
-    required this.popularDoctorModel,
+    required this.allDoctorModel,
+    //required this.popularDoctorModel,
   });
 
-  final PopularDoctorModel popularDoctorModel;
+  //final PopularDoctorModel popularDoctorModel;
+  final AllDoctorsModel allDoctorModel;
 
   @override
   Widget build(BuildContext context) {
@@ -29,19 +32,19 @@ class CustomPopularDoctorContainer extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Image.asset(
-            popularDoctorModel.doctorImage,
+          Image.network(
+            allDoctorModel.photo ?? 'https://example.com/placeholder.png',
             height: 180.h,
             width: 190.w,
           ),
           verticalSpace(14),
           Text(
-            popularDoctorModel.doctorName,
+            allDoctorModel.name ?? 'UnKnown Doctor',
             style: AppStyles.font18Medium,
           ),
           verticalSpace(2),
           Text(
-            popularDoctorModel.doctorMajor,
+            allDoctorModel.specialization!.name ?? 'UnKnown Specialization',
             style: AppStyles.font16Light.copyWith(
               fontSize: 12,
             ),

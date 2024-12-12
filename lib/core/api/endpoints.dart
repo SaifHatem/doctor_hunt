@@ -2,7 +2,7 @@ class Endpoints {
   static String baseUrl = 'https://vcare.integration25.com/api/';
   static String login = 'auth/login';
   static String register = 'auth/register';
-  static String fetchDoctors = 'home/index';
+  static String fetchDoctors = 'doctor/index';
 
   // static String getUserDataEndPoint(id) {
   //   return 'user/get-user/$id';

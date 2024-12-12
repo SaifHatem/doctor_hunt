@@ -11,7 +11,9 @@ import 'search_text_field_and_list_tile.dart';
 import 'see_all_row.dart';
 
 class HomeScreenBody extends StatelessWidget {
-  const HomeScreenBody({super.key});
+  const HomeScreenBody({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

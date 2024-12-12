@@ -25,7 +25,10 @@ void main() async {
   runApp(
     BlocProvider(
       create: (context) => UserCubit(AuthRepoImpl(
-        DioConsumer(dio: Dio()),
+        DioConsumer(
+          dio: Dio(),
+          secureStorageService: secureStorageService,
+        ),
         secureStorageService,
       )),
       child: DoctorHunt(

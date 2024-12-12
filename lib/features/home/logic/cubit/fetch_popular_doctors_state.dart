@@ -12,7 +12,7 @@ final class FetchPopularDoctorsInitial extends FetchPopularDoctorsState {}
 final class FetchPopularDoctorsLoading extends FetchPopularDoctorsState {}
 
 final class FetchPopularDoctorsSuccess extends FetchPopularDoctorsState {
-  final List<DoctorModel> doctors;
+  final List<AllDoctorsModel> doctors;
 
   const FetchPopularDoctorsSuccess(this.doctors);
 }

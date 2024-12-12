@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   awesome_snackbar_content: ^0.1.4
+  bloc: ^8.1.4
   cupertino_icons: ^1.0.8
   dartz: ^0.10.1
   device_preview: ^1.2.0
