@@ -1,3 +1,5 @@
+import 'package:doctor_hunt/features/home/data/models/all_doctors_model/all_doctor_model.dart';
+
 import '../../../../core/helpers/route_export.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_colors.dart';
@@ -7,10 +9,10 @@ import 'custom_ratin_for_featured_doctor.dart';
 class CustomFeaturedDoctorContainer extends StatelessWidget {
   const CustomFeaturedDoctorContainer({
     super.key,
-    required this.featuredDoctorModel,
+    required this.allDoctorsModel,
   });
 
-  final FeaturedDoctorModel featuredDoctorModel;
+  final AllDoctorsModel allDoctorsModel;
 
   @override
   Widget build(BuildContext context) {
@@ -29,18 +31,17 @@ class CustomFeaturedDoctorContainer extends StatelessWidget {
       ),
       child: Column(
         children: [
-          CustomRatingForFeatureDoctor(
-              featuredDoctorModel: featuredDoctorModel),
+          const CustomRatingForFeatureDoctor(),
           ClipOval(
-            child: Image.asset(
-              featuredDoctorModel.doctorImage,
+            child: Image.network(
+              allDoctorsModel.photo!,
               width: 100.w,
               height: 100.h,
               fit: BoxFit.cover,
             ),
           ),
           verticalSpace(10),
-          Text(featuredDoctorModel.doctorName),
+          Text(allDoctorsModel.name!),
           verticalSpace(3),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -49,7 +50,7 @@ class CustomFeaturedDoctorContainer extends StatelessWidget {
                 Icons.attach_money_rounded,
                 color: AppColors.primaryColor,
               ),
-              Text(featuredDoctorModel.price),
+              Text('${allDoctorsModel.appointPrice}\$'),
             ],
           ),
         ],

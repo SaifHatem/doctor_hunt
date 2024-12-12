@@ -3,4 +3,5 @@ import 'package:doctor_hunt/features/home/data/models/all_doctors_model/all_doct
 
 abstract class HomeRepo {
   Future<Either<String, List<AllDoctorsModel>>> fetchPopularDoctors();
+  Future<Either<String, Map<String, dynamic>>> fetchFeaturedDoctors();
 }

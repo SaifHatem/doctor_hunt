@@ -1,15 +1,14 @@
 import '../../../../core/helpers/route_export.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_colors.dart';
-import '../../data/models/featured_doctor_model.dart';
 
 class CustomRatingForFeatureDoctor extends StatefulWidget {
   const CustomRatingForFeatureDoctor({
     super.key,
-    required this.featuredDoctorModel,
+    // required this.featuredDoctorModel,
   });
 
-  final FeaturedDoctorModel featuredDoctorModel;
+  //final FeaturedDoctorModel featuredDoctorModel;
 
   @override
   State<CustomRatingForFeatureDoctor> createState() =>
@@ -58,7 +57,8 @@ class _CustomRatingForFeatureDoctorState
             ),
           ),
 
-          Text(widget.featuredDoctorModel.rating),
+          //Text(widget.featuredDoctorModel.rating),
+          const Text('4.0'),
         ],
       ),
     );

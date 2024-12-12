@@ -1,5 +1,5 @@
 import 'package:doctor_hunt/core/helpers/images_strings.dart';
-import 'package:doctor_hunt/features/home/logic/cubit/fetch_popular_doctors_cubit.dart';
+import 'package:doctor_hunt/features/home/logic/popular_doctors_cubit/fetch_popular_doctors_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/helpers/app_strings.dart';
