@@ -47,6 +47,7 @@ dependencies:
   google_fonts: ^6.2.1
   google_nav_bar: ^5.0.7
   jwt_decoder: ^2.0.1
+  mockito: ^5.4.4
   mocktail: ^1.0.4
   shared_preferences: ^2.3.2
   smooth_page_indicator: ^1.2.0+3
