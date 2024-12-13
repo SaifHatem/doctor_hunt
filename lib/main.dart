@@ -9,6 +9,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'features/auth/data/repos/auth_repo_impl.dart';
 
 void main() async {
+  setup();
   WidgetsFlutterBinding.ensureInitialized();
 
   AndroidOptions getAndroidOptions() => const AndroidOptions(
