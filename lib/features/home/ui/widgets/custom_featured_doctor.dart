@@ -3,7 +3,6 @@ import 'package:doctor_hunt/features/home/data/models/all_doctors_model/all_doct
 import '../../../../core/helpers/route_export.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_colors.dart';
-import '../../data/models/featured_doctor_model.dart';
 import 'custom_ratin_for_featured_doctor.dart';
 
 class CustomFeaturedDoctorContainer extends StatelessWidget {

@@ -5,10 +5,10 @@ import 'package:doctor_hunt/core/errors/failure.dart';
 import 'package:doctor_hunt/features/home/data/models/all_doctors_model/all_doctor_model.dart';
 import 'package:doctor_hunt/features/home/data/models/repo/home_repo.dart';
 
-class HomeRepoImp implements HomeRepo {
+class HomeRepoImpl implements HomeRepo {
   final ApiConsumer apiConsumer;
 
-  HomeRepoImp(this.apiConsumer);
+  HomeRepoImpl(this.apiConsumer);
   @override
   Future<Either<String, List<AllDoctorsModel>>> fetchPopularDoctors() async {
     try {

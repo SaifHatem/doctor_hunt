@@ -1,8 +1,6 @@
-import 'package:dio/dio.dart';
-import 'package:doctor_hunt/core/api/dio_consumer.dart';
+import 'package:doctor_hunt/core/di/service_locator.dart';
 import 'package:doctor_hunt/core/helpers/route_export.dart';
 import 'package:doctor_hunt/core/routing/app_router.dart';
-import 'package:doctor_hunt/core/secure/secure_storage_service.dart';
 import 'package:doctor_hunt/doctor_app.dart';
 import 'package:doctor_hunt/features/auth/logic/cubits/user_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,17 +18,12 @@ void main() async {
   final storage = FlutterSecureStorage(aOptions: getAndroidOptions());
 
   await ScreenUtil.ensureScreenSize();
-  final secureStorageService = SecureStorageService();
 
   runApp(
     BlocProvider(
-      create: (context) => UserCubit(AuthRepoImpl(
-        DioConsumer(
-          dio: Dio(),
-          secureStorageService: secureStorageService,
-        ),
-        secureStorageService,
-      )),
+      create: (context) => UserCubit(
+        getIt.get<AuthRepoImpl>(),
+      ),
       child: DoctorHunt(
         appRouter: AppRouter(),
       ),
