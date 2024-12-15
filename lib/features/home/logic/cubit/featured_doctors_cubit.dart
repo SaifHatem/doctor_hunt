@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:doctor_hunt/features/home/data/models/repo/home_repo.dart';
+import 'package:doctor_hunt/features/home/data/repo/home_repo.dart';
 import 'package:equatable/equatable.dart';
 
 part 'featured_doctors_state.dart';

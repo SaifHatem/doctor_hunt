@@ -1,5 +1,4 @@
 import 'package:doctor_hunt/features/home/data/models/all_doctors_model/all_doctor_model.dart';
-
 import '../../../../core/helpers/route_export.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_styles.dart';
@@ -9,10 +8,8 @@ class CustomPopularDoctorContainer extends StatelessWidget {
   const CustomPopularDoctorContainer({
     super.key,
     required this.allDoctorModel,
-    //required this.popularDoctorModel,
   });
 
-  //final PopularDoctorModel popularDoctorModel;
   final AllDoctorsModel allDoctorModel;
 
   @override
@@ -36,15 +33,18 @@ class CustomPopularDoctorContainer extends StatelessWidget {
             allDoctorModel.photo ?? 'https://example.com/placeholder.png',
             height: 180.h,
             width: 190.w,
+            errorBuilder: (context, error, stackTrace) {
+              return Image.network('https://example.com/placeholder.png'); // Placeholder for error
+            },
           ),
           verticalSpace(14),
           Text(
-            allDoctorModel.name ?? 'UnKnown Doctor',
+            allDoctorModel.name ?? 'Unknown Doctor',
             style: AppStyles.font18Medium,
           ),
           verticalSpace(2),
           Text(
-            allDoctorModel.specialization!.name ?? 'UnKnown Specialization',
+            allDoctorModel.specialization?.name ?? 'Unknown Specialization',
             style: AppStyles.font16Light.copyWith(
               fontSize: 12,
             ),
