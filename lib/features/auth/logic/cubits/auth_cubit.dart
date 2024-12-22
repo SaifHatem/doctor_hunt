@@ -1,12 +1,15 @@
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+
 import '../../data/repos/auth_repo.dart';
-import 'user_state.dart';
+import 'auth_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class UserCubit extends Cubit<UserState> {
-  UserCubit(this.authRepo) : super(UserInitial());
+class AuthCubit extends Cubit<AuthState> {
+  AuthCubit(this.authRepo) : super(UserInitial());
 
   final AuthRepo authRepo;
+  final _storage = const FlutterSecureStorage();
 
   //final ApiConsumer api;
   //Sign in Form key
@@ -54,9 +57,22 @@ class UserCubit extends Cubit<UserState> {
       email: signInEmail.text,
       password: signInPassword.text,
     );
+
     response.fold(
       (errMessage) => emit(SignInFailure(errorMessage: errMessage)),
-      (signInModel) => emit(SignInSuccess()),
+      (signInModel) async {
+        // Extract and save the username
+        final username = signInModel.data?.username ?? 'Guest';
+        await _storage.write(key: 'username', value: username);
+        await _storage.write(
+            key: 'token', value: signInModel.data?.token ?? "");
+
+        emit(SignInSuccess());
+      },
     );
+  }
+
+  Future<String?> getSavedUsername() async {
+    return await _storage.read(key: 'username');
   }
 }

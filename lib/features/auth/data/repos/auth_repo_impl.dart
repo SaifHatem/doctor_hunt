@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:doctor_hunt/core/secure/secure_storage_service.dart';
+import 'package:doctor_hunt/features/auth/data/models/user_model/user_model.dart';
 import '../../../../core/api/dio_consumer.dart';
 import '../../../../core/api/endpoints.dart';
 import '../../../../core/errors/failure.dart';
-import '../models/login_model/login_model.dart';
-import '../models/register_model/register_model.dart';
+
 import 'auth_repo.dart';
 
 class AuthRepoImpl implements AuthRepo {
@@ -17,8 +17,10 @@ class AuthRepoImpl implements AuthRepo {
   );
 
   @override
-  Future<Either<String, LoginModel>> login(
-      {required String email, required String password}) async {
+  Future<Either<String, UserModel>> login({
+    required String email,
+    required String password,
+  }) async {
     try {
       final response = await apiService.post(
         Endpoints.login,
@@ -27,9 +29,17 @@ class AuthRepoImpl implements AuthRepo {
           ApiKey.password: password,
         },
       );
-      final user = LoginModel.fromJson(response);
-      // Store the token securely using SecureStorageService
+
+      // Parse the response and store the user token and username
+      final user = UserModel.fromJson(response);
+
+      // Extract and save the token
       await secureStorageService.setValue(ApiKey.token, user.data!.token ?? "");
+
+      // Extract the username and save it securely
+      final username = response['data']['username'] ?? '';
+      await secureStorageService.setValue('username', username);
+
       return Right(user);
     } on ServerFailure catch (e) {
       return Left(e.errorMessage);
@@ -37,7 +47,7 @@ class AuthRepoImpl implements AuthRepo {
   }
 
   @override
-  Future<Either<String, RegisterModel>> register({
+  Future<Either<String, UserModel>> register({
     required String name,
     required String email,
     required String phone,
@@ -57,15 +67,15 @@ class AuthRepoImpl implements AuthRepo {
           ApiKey.passwordConfirmation: confirmPassword,
         },
       );
-      final registerModel = RegisterModel.fromJson(response);
+      final userModel = UserModel.fromJson(response);
 
       // Store the token securely (if token is provided after registration)
-      if (registerModel.data!.token != null) {
+      if (userModel.data!.token != null) {
         await secureStorageService.setValue(
-            ApiKey.token, registerModel.data!.token!);
+            ApiKey.token, userModel.data!.token!);
       }
 
-      return Right(registerModel);
+      return Right(userModel);
     } on ServerFailure catch (e) {
       return Left(e.errorMessage);
     }

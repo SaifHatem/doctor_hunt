@@ -13,14 +13,14 @@ class AppScrollBehavior extends MaterialScrollBehavior {
       };
 }
 
-class IntroScreen extends StatefulWidget {
-  const IntroScreen({super.key});
+class IntroView extends StatefulWidget {
+  const IntroView({super.key});
 
   @override
-  State<IntroScreen> createState() => _IntroScreenState();
+  State<IntroView> createState() => _IntroViewState();
 }
 
-class _IntroScreenState extends State<IntroScreen> {
+class _IntroViewState extends State<IntroView> {
   final PageController _pageController = PageController();
   int _activePage = 0;
 
@@ -31,8 +31,7 @@ class _IntroScreenState extends State<IntroScreen> {
         curve: Curves.fastEaseInToSlowEaseOut,
       );
     } else {
-      Navigator.pushNamed(
-          context, Routes.signinScreen); // Navigate on last page
+      Navigator.pushNamed(context, Routes.signinView); // Navigate on last page
     }
   }
 

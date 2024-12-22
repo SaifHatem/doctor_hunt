@@ -1,25 +1,26 @@
+import 'package:doctor_hunt/features/home/ui/screens/home_view.dart';
+import 'package:doctor_hunt/features/settings/ui/screens/settings_screen.dart';
+
 import '../helpers/route_export.dart';
-import '../../features/home/ui/screens/home_view.dart';
-import '../../features/settings/ui/screens/settings_screen.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 import '../theming/app_colors.dart';
 
-class BottomNavigationScreen extends StatefulWidget {
-  const BottomNavigationScreen({super.key});
+class BottomNavigationView extends StatefulWidget {
+  const BottomNavigationView({super.key});
 
   @override
-  State<BottomNavigationScreen> createState() => _BottomNavigationScreenState();
+  State<BottomNavigationView> createState() => _BottomNavigationViewState();
 }
 
-class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
+class _BottomNavigationViewState extends State<BottomNavigationView> {
   int _selectedIndex = 0;
 
   final List<Widget> _screens = [
-    const HomeScreen(),
-    const SettingsScreen(),
-    const HomeScreen(),
-    const SettingsScreen(),
+    const HomeView(),
+    const SettingsView(),
+    const HomeView(),
+    const SettingsView(),
   ];
 
   @override

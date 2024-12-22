@@ -91,14 +91,14 @@ class IntroWidget extends StatelessWidget {
                     if (index == currentIndex) {
                       onTab(); // Move to the next page
                     } else {
-                      Navigator.pushNamed(context, Routes.signinScreen);
+                      Navigator.pushNamed(context, Routes.signinView);
                     }
                   },
                 ),
                 const SizedBox(height: 20),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, Routes.signinScreen);
+                    Navigator.pushNamed(context, Routes.signinView);
                   },
                   child: const Text(
                     'Skip',

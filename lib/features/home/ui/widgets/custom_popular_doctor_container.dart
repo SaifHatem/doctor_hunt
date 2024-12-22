@@ -30,11 +30,16 @@ class CustomPopularDoctorContainer extends StatelessWidget {
       child: Column(
         children: [
           Image.network(
-            allDoctorModel.photo ?? 'https://example.com/placeholder.png',
+            allDoctorModel.photo ??
+                'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png',
             height: 180.h,
             width: 190.w,
             errorBuilder: (context, error, stackTrace) {
-              return Image.network('https://example.com/placeholder.png'); // Placeholder for error
+              return Image.network(
+                'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png',
+                height: 180.h,
+                width: 190.w,
+              ); // Placeholder for error
             },
           ),
           verticalSpace(14),

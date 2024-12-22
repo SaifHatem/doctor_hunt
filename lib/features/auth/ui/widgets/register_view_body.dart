@@ -1,3 +1,6 @@
+import 'package:doctor_hunt/features/auth/logic/cubits/auth_cubit.dart';
+import 'package:doctor_hunt/features/auth/logic/cubits/auth_state.dart';
+
 import '../../../../core/helpers/app_strings.dart';
 import '../../../../core/helpers/route_export.dart';
 import '../../../../core/helpers/spacing.dart';
@@ -6,8 +9,6 @@ import '../../../../core/theming/app_styles.dart';
 import '../../../../core/widgets/app_text_button.dart';
 import '../../../../core/widgets/custom_snack_bar.dart';
 import '../../../../core/widgets/text_form_field.dart';
-import '../../logic/cubits/user_cubit.dart';
-import '../../logic/cubits/user_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'login_and_register_row_methods.dart';
@@ -19,7 +20,7 @@ class RegisterViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<UserCubit, UserState>(
+    return BlocConsumer<AuthCubit, AuthState>(
       listener: (context, state) {
         if (state is SignUpSuccess) {
           ScaffoldMessenger.of(context).showSnackBar(
@@ -79,7 +80,7 @@ class RegisterViewBody extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 15.w),
               child: SingleChildScrollView(
                 child: Form(
-                  key: context.read<UserCubit>().signUpFormKey,
+                  key: context.read<AuthCubit>().signUpFormKey,
                   child: Column(
                     //mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -90,33 +91,33 @@ class RegisterViewBody extends StatelessWidget {
                       const LoginAndRegisterRowMethods(),
                       verticalSpace(37),
                       AppTextFormField(
-                        controller: context.read<UserCubit>().signUpName,
+                        controller: context.read<AuthCubit>().signUpName,
                         hintText: AppStrings.name,
                       ),
                       verticalSpace(15),
                       AppTextFormField(
-                        controller: context.read<UserCubit>().signUpEmail,
+                        controller: context.read<AuthCubit>().signUpEmail,
                         hintText: AppStrings.email,
                       ),
                       verticalSpace(15),
                       AppTextFormField(
-                        controller: context.read<UserCubit>().signUpPhoneNumber,
+                        controller: context.read<AuthCubit>().signUpPhoneNumber,
                         hintText: AppStrings.phone,
                       ),
                       verticalSpace(15),
                       AppTextFormField(
-                        controller: context.read<UserCubit>().signUpGender,
+                        controller: context.read<AuthCubit>().signUpGender,
                         hintText: AppStrings.gender,
                       ),
                       verticalSpace(15),
                       AppTextFormField(
-                        controller: context.read<UserCubit>().signUpPassword,
+                        controller: context.read<AuthCubit>().signUpPassword,
                         hintText: AppStrings.password,
                         isPasswordField: true,
                       ),
                       verticalSpace(15),
                       AppTextFormField(
-                        controller: context.read<UserCubit>().confirmPassword,
+                        controller: context.read<AuthCubit>().confirmPassword,
                         hintText: AppStrings.confirmPassword,
                         isPasswordField: true,
                       ),
@@ -135,7 +136,7 @@ class RegisterViewBody extends StatelessWidget {
                                 fontSize: 14,
                               ),
                               onPressed: () {
-                                context.read<UserCubit>().register();
+                                context.read<AuthCubit>().register();
                               },
                             ),
                       verticalSpace(27),

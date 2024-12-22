@@ -1,3 +1,6 @@
+import 'package:doctor_hunt/features/auth/logic/cubits/auth_cubit.dart';
+import 'package:doctor_hunt/features/auth/logic/cubits/auth_state.dart';
+
 import '../../../../core/helpers/app_strings.dart';
 import '../../../../core/helpers/route_export.dart';
 import '../../../../core/helpers/spacing.dart';
@@ -7,8 +10,6 @@ import '../../../../core/theming/app_styles.dart';
 import '../../../../core/widgets/app_text_button.dart';
 import '../../../../core/widgets/custom_snack_bar.dart';
 import '../../../../core/widgets/text_form_field.dart';
-import '../../logic/cubits/user_cubit.dart';
-import '../../logic/cubits/user_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'login_and_register_row_methods.dart';
@@ -21,7 +22,7 @@ class LoginViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<UserCubit, UserState>(
+    return BlocConsumer<AuthCubit, AuthState>(
       listener: (context, state) {
         if (state is SignInSuccess) {
           ScaffoldMessenger.of(context).showSnackBar(
@@ -43,7 +44,7 @@ class LoginViewBody extends StatelessWidget {
               elevation: 0,
             ),
           );
-          Navigator.pushNamed(context, Routes.homeScreen);
+          Navigator.pushNamed(context, Routes.homeview);
         } else if (state is SignInFailure) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
@@ -81,7 +82,7 @@ class LoginViewBody extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 12.0.w),
               child: SingleChildScrollView(
                 child: Form(
-                  key: context.read<UserCubit>().signInFormKey,
+                  key: context.read<AuthCubit>().signInFormKey,
                   child: Column(
                     //mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -92,13 +93,13 @@ class LoginViewBody extends StatelessWidget {
                       const LoginAndRegisterRowMethods(),
                       verticalSpace(37),
                       AppTextFormField(
-                        controller: context.read<UserCubit>().signInEmail,
+                        controller: context.read<AuthCubit>().signInEmail,
                         hintText: AppStrings.email,
                         isPasswordField: false,
                       ),
                       verticalSpace(15),
                       AppTextFormField(
-                        controller: context.read<UserCubit>().signInPassword,
+                        controller: context.read<AuthCubit>().signInPassword,
                         hintText: AppStrings.password,
                         isPasswordField: true,
                       ),
@@ -115,7 +116,7 @@ class LoginViewBody extends StatelessWidget {
                                 color: Colors.white,
                               ),
                               onPressed: () {
-                                context.read<UserCubit>().signIn();
+                                context.read<AuthCubit>().signIn();
                                 // Navigator.pushNamed(
                                 //     context, Routes.bottomNavigationScreen);
                               },
@@ -130,7 +131,7 @@ class LoginViewBody extends StatelessWidget {
                       verticalSpace(40),
                       GestureDetector(
                         onTap: () {
-                          Navigator.pushNamed(context, Routes.signupScreen);
+                          Navigator.pushNamed(context, Routes.signupView);
                         },
                         child: Text(
                           AppStrings.dontHaveAccount,

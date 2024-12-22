@@ -1,37 +1,47 @@
 import 'package:doctor_hunt/core/routing/routes.dart';
+import 'package:doctor_hunt/features/home/ui/screens/home_view.dart';
+import 'package:doctor_hunt/features/search/ui/views/search_view.dart';
+import 'package:doctor_hunt/features/search/ui/views/select_time_view.dart';
 
 import '../../features/auth/ui/views/login_view.dart';
 import '../helpers/route_export.dart';
 import '../widgets/bottom_navigation_bar.dart';
-import '../../features/home/ui/screens/home_view.dart';
 import '../../features/settings/ui/screens/settings_screen.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case Routes.onBoardingScreen:
+      case Routes.onBoardingView:
         return MaterialPageRoute(
-          builder: (context) => const IntroScreen(),
+          builder: (context) => const IntroView(),
         );
-      case Routes.signinScreen:
+      case Routes.signinView:
         return MaterialPageRoute(
           builder: (context) => const LoginView(),
         );
-      case Routes.signupScreen:
+      case Routes.signupView:
         return MaterialPageRoute(
-          builder: (context) => const RegisterScreen(),
+          builder: (context) => const RegisterView(),
         );
-      case Routes.homeScreen:
+      case Routes.homeview:
         return MaterialPageRoute(
-          builder: (context) => const HomeScreen(),
+          builder: (context) => const HomeView(),
         );
-      case Routes.bottomNavigationScreen:
+      case Routes.bottomNavigationView:
         return MaterialPageRoute(
-          builder: (context) => const BottomNavigationScreen(),
+          builder: (context) => const BottomNavigationView(),
         );
-      case Routes.settingsScreen:
+      case Routes.settingsView:
         return MaterialPageRoute(
-          builder: (context) => const SettingsScreen(),
+          builder: (context) => const SettingsView(),
+        );
+      case Routes.searchView:
+        return MaterialPageRoute(
+          builder: (context) => const SearchView(),
+        );
+      case Routes.selectTimeView:
+        return MaterialPageRoute(
+          builder: (context) => const SelectTimeView(),
         );
 
       default:

@@ -14,7 +14,7 @@ class DoctorHunt extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       child: MaterialApp(
-        home: const IntroScreen(),
+        home: const IntroView(),
         theme: ThemeData(
           scaffoldBackgroundColor: Colors.white,
           textTheme: GoogleFonts.rubikTextTheme(),
