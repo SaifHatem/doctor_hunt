@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'search_custom_card_search_result.dart';
 
@@ -11,9 +12,9 @@ class SearchResultListView extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         itemCount: 10,
         itemBuilder: (context, index) {
-          return const Padding(
-            padding: EdgeInsets.only(bottom: 10.0),
-            child: CustomCardSearchResult(),
+          return Padding(
+            padding: EdgeInsets.only(bottom: 10.0.h),
+            child: const CustomCardSearchResult(),
           );
         });
   }

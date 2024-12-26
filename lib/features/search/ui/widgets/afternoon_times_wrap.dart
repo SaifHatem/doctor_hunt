@@ -10,6 +10,7 @@ class AfternoonTimesWrap extends StatefulWidget {
 }
 
 class _AfternoonTimesWrap extends State<AfternoonTimesWrap> {
+  //! TODO: Add the following list of strings to a seperated file ...
   final List<String> clockItems = [
     '12:30 pm',
     '1:00 pm',

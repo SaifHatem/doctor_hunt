@@ -1,4 +1,5 @@
 mixin PngAssets {
+
   static const String pngAssets = "assets/image/";
 }
 
@@ -11,6 +12,7 @@ mixin VideoAssets {
 }
 
 class AppAssets with PngAssets, SvgAssets, VideoAssets {
+  //! TODO: Use This Class
   // Image PNG
 //   static const String adsImage = "${PngAssets.pngAssets}ads.png";
 
