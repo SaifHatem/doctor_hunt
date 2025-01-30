@@ -148,7 +148,7 @@ class CustomCardSearchResult extends StatelessWidget {
           onPressed: () {
             Navigator.pushNamed(context, Routes.selectTimeView);
           },
-        )
+        ),
       ],
     );
   }

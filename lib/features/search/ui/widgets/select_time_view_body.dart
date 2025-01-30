@@ -1,13 +1,13 @@
 import 'package:doctor_hunt/core/helpers/spacing.dart';
 import 'package:doctor_hunt/core/widgets/custom_background.dart';
 import 'package:doctor_hunt/features/search/ui/widgets/afternoon_times_wrap.dart';
+import 'package:doctor_hunt/features/search/ui/widgets/build_doctor_info.dart';
 import 'package:doctor_hunt/features/search/ui/widgets/day_items_listview.dart';
-import 'package:doctor_hunt/features/search/ui/widgets/search_custom_heart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/widgets/custom_appbar.dart';
-import 'select_time_custom_starts_rating.dart';
 
 class SelectTimeViewBody extends StatefulWidget {
   const SelectTimeViewBody({super.key});
@@ -31,7 +31,10 @@ class _SelectTimeViewBodyState extends State<SelectTimeViewBody> {
               children: [
                 const CustomAppbar(appBarTitle: 'Select Time'),
                 verticalSpace(34),
-                _buildDoctorInfo(),
+                DoctorInfoCard(
+                  onTap: () =>
+                      Navigator.pushNamed(context, Routes.doctorDetailsView),
+                ),
                 verticalSpace(20),
                 const DayItemsListView(),
                 verticalSpace(20),
@@ -47,57 +50,6 @@ class _SelectTimeViewBodyState extends State<SelectTimeViewBody> {
           ),
         ),
       ],
-    );
-  }
-
-  Widget _buildDoctorInfo() {
-    return Container(
-      decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
-            blurRadius: 6,
-            offset: const Offset(0, 3),
-          ),
-        ],
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(8.0.r),
-      ),
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10.0.w, vertical: 10.0.h),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Image.asset(
-              'assets/images/doctor.png',
-              height: 87.0.h,
-              width: 92.0.w,
-            ),
-            horizontalSpace(8),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Dr. Shruti Kediadi',
-                    style: AppStyles.font18Medium,
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                  Text(
-                    'Upasana Dental Clinic, salt lake',
-                    style: AppStyles.font12Light,
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                  const SelectTimeCustomStarsRating(),
-                ],
-              ),
-            ),
-            const CustomHeart(),
-          ],
-        ),
-      ),
     );
   }
 

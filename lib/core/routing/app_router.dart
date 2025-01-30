@@ -1,8 +1,11 @@
 import 'package:doctor_hunt/core/routing/routes.dart';
+import 'package:doctor_hunt/features/appointment/ui/views/doctor_details_view.dart';
+import 'package:doctor_hunt/features/appointment/ui/views/patient_appointment_view.dart';
 import 'package:doctor_hunt/features/home/ui/screens/home_view.dart';
 import 'package:doctor_hunt/features/search/ui/views/search_view.dart';
 import 'package:doctor_hunt/features/search/ui/views/select_time_view.dart';
 
+import '../../features/appointment/ui/views/time_appointment_view.dart';
 import '../../features/auth/ui/views/login_view.dart';
 import '../helpers/route_export.dart';
 import '../widgets/bottom_navigation_bar.dart';
@@ -42,6 +45,19 @@ class AppRouter {
       case Routes.selectTimeView:
         return MaterialPageRoute(
           builder: (context) => const SelectTimeView(),
+        );
+
+      case Routes.doctorDetailsView:
+        return MaterialPageRoute(
+          builder: (context) => const DoctorDetailsView(),
+        );
+      case Routes.patientAppointmentView:
+        return MaterialPageRoute(
+          builder: (context) => const PatientAppointmentView(),
+        );
+      case Routes.timeAppointmentView:
+        return MaterialPageRoute(
+          builder: (context) => const TimeAppointmentView(),
         );
 
       default:
